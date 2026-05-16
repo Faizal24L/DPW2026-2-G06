@@ -1,0 +1,644 @@
+body {
+  background-color: #ededed;
+  margin: 0;
+  font-family: "Bebas Neue", sans-serif;
+}
+/* ------------------------------------------------------------- */
+
+.container {
+  display: grid; 
+  height: 100%;
+  /* Membuat Grid menjadi 4 baris tiga kolom */
+  grid-template-areas:
+    "header header header"
+    "menu menu menu"
+    "content content sidebar"
+    "footer footer footer";
+  /* Mengatur besar setiap kolom dan baris pada bagian bagian grid */
+  grid-template-columns: 200px 1fr 250px;
+  grid-template-rows: 400px 50px 1fr 50px;
+  gap: 5px; /* memberikan jarak setiap container elemen yang di bungkus oleh class container*/
+}
+
+.header {
+  grid-area: header; /* untuk mengdeklarasi bahwa ini bagian header pada class container */
+  background-image: url("./gambar/background2.png");
+  background-position: center;
+  box-shadow: 0px 0px 10px rgb(0, 0, 0); /* membarikan efk bayangan */
+
+  text-align: center; /* mengatur agar rata tengah secara horizontal */
+  display: flex;
+  justify-content: center; /* Mengatur agar rata tengah secara vertikal */
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+
+.menu {
+  grid-area: menu;  /* untuk mengdeklarasi bahwa ini bagian menu pada class container */
+  background-color: #1f3a36;  
+  box-shadow: 0px 0px 8px rgb(0, 0, 0);
+
+  display: flex;
+  flex-direction: column; /* mengatur agar flex di susun secara vertikal*/
+  flex-wrap: wrap; /* mengubah yang awal nya dari kolom menjadi vertikal*/
+  justify-content: center; /*dilakukan agar secara rata tengah secara vertikal*/
+  /* gap: 100px; */
+}
+
+.navigasi a {
+  font-size: xx-large; 
+  color: white;
+  text-decoration: none; /* Untuk menghilangkan garis bawah pada menu navigasi */
+}
+.navigasi {
+  text-align: center; /* untuk mengatus agar text rata tengah secara horizontal*/
+}
+
+.sidebar {
+  display: grid; 
+  grid-template-areas: "boxAtas" "boxBawah";
+  grid-template-rows: 1fr 1fr;
+
+  grid-area: sidebar; /* untuk mengdeklarasi bahwa ini bagian sidebar pada class container */
+  background-color: #f4f1e6;
+  box-shadow: 0px 0px 8px rgb(0, 0, 0); /*menciptakan banyangan*/
+}
+
+.footer {
+  grid-area: footer; /* untuk mengdeklarasi bahwa ini bagian footer pada class container */
+  background-color: #1f3a36;
+  box-shadow: 0px 0px 8px rgb(0, 0, 0);
+  color: white;
+
+  display: flex;
+  text-align: center; /*untuk mengatur agar text berada di tengah secara horizontal*/
+  justify-content: center; 
+  flex-direction: column; /* untuk mengatur konten agar tersusun seacara vertikal*/
+}
+
+
+
+
+/* ----------------------------------------------------------------------------- */
+/* index */
+
+.contentIndex {
+  grid-area: content; /* untuk mengdeklarasi bahwa ini bagian content pada class container */
+
+  display: grid;
+  grid-template-areas: "kiri kanan"; /* untuk membagi dua bagian bagian kanan dan bagian kiri (Vertikal)*/
+  grid-template-columns: 1.5fr 1fr; /*untuk membagi bagian kiri 1,5 bagian dan kanan 1 bagian*/
+  box-shadow: 0px 0px 8px rgb(0, 0, 0);
+
+
+  background-color: #f4f1e6;
+  padding: 10px; /* Jarak antara Garis tepi dan conten di dalamnya */
+}
+
+h1 {
+  font-size: 50px; 
+  color: white;
+  text-shadow: 0px 8px 20px #f4f1e6;
+}
+
+/*index: mengatur semua gambar*/
+.gambar1,
+.gambar2,
+.gambar3,
+.gambar4,
+.gambar5,
+.gambar6,
+.gambar7 {
+  border-radius: 5px;
+  height: 150px;
+  width: 150px;
+}
+
+.kumpulan_foto {
+  display: flex;
+}
+/* mengatur gambar class pada class kiri */
+.gambarkiri {
+  margin: 35px; 
+  height: 150px;
+  width: 150px;
+  border-radius: 30px;
+}
+/* Mengatur container pada bigian class foto*/
+.foto {
+  display: flex;
+  flex-direction: column; /* mengatur agar content tersusun secara vertikal */
+  align-items: center; /*Untuk mengatur agar item (foto) berada di tengah secara horizontal*/
+  margin: 0px;
+  padding-left: 50px; /* Jarak antara garis tepi container dengan conten di sebelah kiri */
+  padding-right: 50px; /* Jarak antara garis tepi container dengan conten di sebelah kanan */
+}
+
+.foto img,
+.kumpulan_gambar img {
+  box-shadow: 0px 5px 5px rgb(0, 0, 0);
+  margin-bottom: 10px; /*mengatur margin bagina bawah agar tidak terlalu jauh jarak antara foto dengan text*/
+}
+
+.foto p,
+h3 {
+  text-align: center;
+  margin: 2px;
+}
+
+.s_judul {
+  color: #32827a;
+}
+
+/* Mengatur panjang maximal texk paragraf */
+p {
+  max-width: 700px;
+}
+
+/*================ bagian statistik pekerjaan pelayanan =====================*/
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.sub-stats p {
+  margin: 0px;
+}
+
+.sub-stats h3 {
+  margin-top: 10px;
+}
+
+.sub-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+/* ========================================================================= */
+
+/* garis kecil */
+.garis {
+  width: 60px;
+  height: 1px;
+  background-color: #32827a;
+  border: solid;
+  border-color: #32827a;
+  border-radius: 50px;
+  box-shadow: 0px 0px 5px #32827a;
+}
+/* ==================== BAGIAN KANAN ======================================= */
+
+.kanan {
+  grid-area: kanan; /* mengdeklarisikan bahwa ini bagian kanan pada class contentindex*/
+  display: flex; 
+  flex-wrap: wrap; /* Agar konten otomatis kebawah saat sudah memenuhi container */
+  margin: 5px;
+  gap: 10px; /* Jarak setiap konten */
+  padding: 35px;
+  color: white;
+
+  background-color: #1f3a36;
+  border-radius: 10px;
+  align-content: flex-start; 
+}
+
+.kiri {
+  margin: 5px;
+}
+
+.box {
+  background-color: white;
+  margin: 10px;
+  border-style: solid;
+  border-color: #1f3a36;
+  border-width: 4px;
+  border-radius: 7px;
+}
+
+.box h3 {
+  background-color: #1f3a36;
+  margin: 0;
+  text-align: center;
+}
+.box p {
+  margin: 10px;
+  padding: 5px;
+}
+
+.header,
+.contentIndex,
+.footer,
+.menu,
+.sidebar,
+.contentAbout {
+  border-radius: 5px;
+}
+/* ---------------------------------------------------------------------------------- */
+/* Halaman About Us */
+.contentAbout {
+  grid-area: content;
+
+  display: grid;
+  grid-template-areas: "atas tengah bawah";
+  grid-template-columns: 1fr 1fr 1fr;
+  box-shadow: 0px 0px 8px black;
+  background-color: #f4f1e6;
+}
+
+.person {
+  display: flex;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+
+  width: 400px;
+  height: 600px;
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 40px;
+  box-shadow: 0px 5px 5px black;
+
+  margin: 50px;
+}
+
+.person p,
+.person h3 {
+  text-align: center;
+  margin: 0px;
+  margin-top: 10px;
+  color: black;
+}
+
+.person img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 0px 5px 5px black;
+  margin: 0px;
+}
+
+.job-desk {
+  height: 320px;
+  width: 300px;
+  background-color: #1f3a36;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+.job-desk ul,
+.job-desk h3 {
+  color: white;
+}
+
+/*---------------------------------------------------------*/
+/* =========================
+   FORM LAYANAN
+========================= */
+
+.content-layanan {
+  grid-area: content;
+  /* Area grid */
+
+  background-color: #f4f1e6;
+  /* Background putih */
+
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px black;
+  padding: 40px;
+  /* Jarak isi */
+  color: #333;
+  /* Warna teks */
+}
+
+/* =========================
+   SELECT OPTION
+========================= */
+
+select {
+  width: 100%;
+  /* Lebar penuh */
+
+  padding: 12px;
+  /* Jarak isi */
+
+  border: 1px solid #ccc;
+  /* Border abu */
+
+  border-radius: 8px;
+  /* Sudut melengkung */
+
+  font-size: 16px;
+  /* Ukuran teks */
+}
+
+/* =========================
+   HEADER FORM
+========================= */
+
+.form-header p {
+  font-size: 14px;
+  /* Ukuran teks */
+
+  color: #555;
+  /* Warna teks */
+
+  margin: 0 0 30px 0;
+  /* Margin bawah 30px */
+}
+
+/* =========================
+   FORM CUSTOM
+========================= */
+
+.custom-form {
+  display: flex;
+  /* Flexbox */
+
+  flex-direction: column;
+  /* Susunan vertikal */
+
+  gap: 20px;
+  /* Jarak antar elemen */
+}
+
+/* Baris form */
+.form-row {
+  display: grid;
+  /* Grid layout */
+
+  grid-template-columns: 1fr 1fr;
+  /* 2 kolom */
+
+  gap: 20px;
+  /* Jarak antar kolom */
+}
+
+/* =========================
+   LABEL INPUT
+========================= */
+
+.input-group label {
+  display: block;
+  /* Supaya label turun ke bawah */
+
+  font-size: 13px;
+  /* Ukuran teks */
+
+  font-weight: 700;
+  /* Tebal */
+
+  margin-bottom: 8px;
+  /* Jarak bawah */
+
+  color: #000;
+  /* Warna hitam */
+}
+
+/* =========================
+   WRAPPER INPUT
+========================= */
+
+.input-wrapper {
+  display: flex;
+  /* Flexbox */
+
+  align-items: center;
+  /* Posisi tengah vertikal */
+
+  border: 1px solid #e0e4e2;
+  /* Border */
+
+  border-radius: 6px;
+  /* Sudut melengkung */
+
+  background-color: #ffffff;
+  /* Background putih */
+
+  transition: border-color 0.3s;
+  /* Animasi perubahan warna border */
+}
+
+/* Saat input diklik */
+.input-wrapper:focus-within {
+  border-color: #197762;
+  /* Border berubah hijau */
+}
+
+/* =========================
+   IKON INPUT
+========================= */
+
+.input-wrapper .icon {
+  padding: 0 15px;
+  /* Jarak kiri kanan */
+
+  color: #197762;
+  /* Warna ikon */
+
+  font-size: 16px;
+  /* Ukuran ikon */
+}
+
+/* =========================
+   INPUT, SELECT, TEXTAREA
+========================= */
+
+.input-wrapper input,
+.input-wrapper select,
+.input-wrapper textarea {
+  flex: 1;
+  /* Mengisi ruang kosong */
+
+  border: none;
+  /* Hilangkan border */
+
+  padding: 14px 15px 14px 0;
+  /* Padding */
+
+  font-size: 14px;
+  /* Ukuran teks */
+
+  font-family: inherit;
+  /* Mengikuti font parent */
+
+  color: #333;
+  /* Warna teks */
+
+  background: transparent;
+  /* Background transparan */
+
+  outline: none;
+  /* Hilangkan garis biru */
+}
+
+/* Cursor select */
+.input-wrapper select {
+  cursor: pointer;
+  /* Cursor jadi tangan */
+}
+
+/* Textarea */
+.input-wrapper textarea {
+  resize: vertical;
+  /* Resize hanya atas bawah */
+}
+
+/* Align isi ke atas */
+.align-top {
+  align-items: flex-start;
+}
+
+/* =========================
+   TOMBOL SUBMIT
+========================= */
+
+.btn-submit {
+  background-color: #197762;
+  /* Background hijau */
+
+  color: #ffffff;
+  /* Warna teks putih */
+
+  border: none;
+  /* Hilangkan border */
+
+  padding: 15px;
+  /* Jarak isi */
+
+  font-size: 15px;
+  /* Ukuran teks */
+
+  font-weight: bold;
+  /* Teks tebal */
+
+  border-radius: 6px;
+  /* Sudut melengkung */
+
+  cursor: pointer;
+  /* Cursor tangan */
+
+  display: flex;
+  /* Flexbox */
+
+  justify-content: center;
+  /* Tengah horizontal */
+
+  align-items: center;
+  /* Tengah vertikal */
+
+  gap: 8px;
+  /* Jarak item */
+
+  margin-top: 10px;
+  /* Jarak atas */
+
+  transition: background-color 0.2s;
+  /* Animasi hover */
+}
+
+/* Hover tombol */
+.btn-submit:hover {
+  background-color: #135c4c;
+  /* Warna saat disentuh cursor */
+}
+
+/* ----------------------------------------------------------------------------- */
+/* evaluasi */
+/* Konten khusus evaluasi agar rata penuh ke kiri*/
+.content-evaluasi {
+  grid-area: content;
+  background-color: #f4f1e6;
+  padding: 0px; /* padding 0 agar rata kiri */
+  width: 100%; /* untuk memastikan lebar kotak memenuhi seluruh ruang yang disediakan */
+  overflow: visible; /* agar tidak ada batasan */
+  background-color: #f4f1e6;
+}
+
+/* style untuk tabel evaluasi */
+.evalution-table {
+  width: 100%; /* untuk memastikan lebar kotak memenuhi seluruh ruang yang disediakan */
+  border-collapse: collapse; /* untuk menggabungkan garis batas antar sel agar menyatu dan rapi tidak ada celah antar garis */
+  border: 1px solid #e2e8f0; /* untuk memberikan garis batas pada seluruh tabel agar jelas terlihat batasnya */
+}
+
+/* header table */
+.evalution-table thead tr {
+  background-color: #0d7c66;
+  color: #ffffff;
+}
+
+/* header table */
+.evalution-table th {
+  padding: 14px 12px; /* agar ruang di dalam kotak judul: 14px (atas-bawah), 12px (kiri-kanan) biar tidak sempit */
+  text-align: left; /* agar text rata kiri */
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.4; /* agar ada jarak antar baris teks di dalam header */
+  white-space: nowrap; /* agar teks tidak terpotong */
+}
+
+/* isi tabel */
+.evalution-table td {
+  padding: 12px 12px; /* agar ruang di dalam kotak judul: 12px (atas-bawah), 12px (kiri-kanan) biar tidak sempit */
+  font-size: 14px;
+  color: #334155;
+  border-bottom: 1px solid #e2e8f0; /* agar ada garis batas  antar baris */
+  vertical-align: middle; /* agar isi tabel rata tengah secara vertikal */
+}
+
+/* baris genap untuk warna yang berbeda */
+.evalution-table tbody tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+/* kolom nomer */
+.evalution-table td:first-child {
+  text-align: center; /* agar isi tabel rata tengah secara horizontal */
+  font-weight: 500;
+  width: 50px;
+}
+
+/* kolom aspek evaluasi */
+.aspek .icon-text {
+  display: flex; /* agar ikon dan teks berada dalam satu baris */
+  align-items: center; /* agar ikon dan teks rata tengah secara vertikal */
+}
+
+.aspek span {
+  font-weight: 500;
+}
+
+/* kolom sesuai / tidak sesuai */
+.center {
+  text-align: center; /* agar isi tabel rata tengah secara horizontal */
+  width: 70px;
+}
+
+/* kolom checkbox */
+.center input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer; /* agar kursor berubah menjadi pointer saat hover */
+  accent-color: #0d7c66;
+}
+
+/* kolom keterangan text area */
+td textarea {
+  width: 100%;
+  min-height: 36px;
+  padding: 6px 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  font-size: 13px;
+  resize: vertical; /* aagar textarea bisa vertikal */
+  outline: none;
+  transition: border 0.2s; /* agar ada efek transisi */
+}
+
+td textarea:focus {
+  border-color: #0d7c66;
+  box-shadow: 0 0 0 2px rgba(13, 124, 102, 0.1);
+}
