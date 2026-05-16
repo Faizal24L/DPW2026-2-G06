@@ -218,7 +218,7 @@ p {
   border-radius: 7px;
 }
 
-.box h3 {
+.box h2 {
   background-color: #1f3a36;
   margin: 0;
   text-align: center;
@@ -264,8 +264,7 @@ p {
   margin: 50px;
 }
 
-.person p,
-.person h3 {
+.person p {
   text-align: center;
   margin: 0px;
   margin-top: 10px;
@@ -289,7 +288,7 @@ p {
 }
 
 .job-desk ul,
-.job-desk h3 {
+.job-desk p {
   color: white;
 }
 
