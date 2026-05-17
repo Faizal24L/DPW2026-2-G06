@@ -6,7 +6,7 @@ body {
 /* ------------------------------------------------------------- */
 
 .container {
-  display: grid; 
+  display: grid;
   height: 100%;
   /* Membuat Grid menjadi 4 baris tiga kolom */
   grid-template-areas:
@@ -33,10 +33,9 @@ body {
   border-radius: 5px;
 }
 
-
 .menu {
-  grid-area: menu;  /* untuk mengdeklarasi bahwa ini bagian menu pada class container */
-  background-color: #1f3a36;  
+  grid-area: menu; /* untuk mengdeklarasi bahwa ini bagian menu pada class container */
+  background-color: #1f3a36;
   box-shadow: 0px 0px 8px rgb(0, 0, 0);
 
   display: flex;
@@ -47,7 +46,7 @@ body {
 }
 
 .navigasi a {
-  font-size: xx-large; 
+  font-size: xx-large;
   color: white;
   text-decoration: none; /* Untuk menghilangkan garis bawah pada menu navigasi */
 }
@@ -56,7 +55,7 @@ body {
 }
 
 .sidebar {
-  display: grid; 
+  display: grid;
   grid-template-areas: "boxAtas" "boxBawah";
   grid-template-rows: 1fr 1fr;
 
@@ -73,12 +72,9 @@ body {
 
   display: flex;
   text-align: center; /*untuk mengatur agar text berada di tengah secara horizontal*/
-  justify-content: center; 
+  justify-content: center;
   flex-direction: column; /* untuk mengatur konten agar tersusun seacara vertikal*/
 }
-
-
-
 
 /* ----------------------------------------------------------------------------- */
 /* index */
@@ -91,13 +87,12 @@ body {
   grid-template-columns: 1.5fr 1fr; /*untuk membagi bagian kiri 1,5 bagian dan kanan 1 bagian*/
   box-shadow: 0px 0px 8px rgb(0, 0, 0);
 
-
   background-color: #f4f1e6;
   padding: 10px; /* Jarak antara Garis tepi dan conten di dalamnya */
 }
 
 h1 {
-  font-size: 50px; 
+  font-size: 50px;
   color: white;
   text-shadow: 0px 8px 20px #f4f1e6;
 }
@@ -118,12 +113,13 @@ h1 {
 .kumpulan_foto {
   display: flex;
 }
-/* mengatur gambar class pada class kiri */
+/* mengatur gambar pada class kiri */
 .gambarkiri {
-  margin: 35px; 
+  margin: 35px;
   height: 150px;
   width: 150px;
   border-radius: 30px;
+  object-fit: cover;
 }
 /* Mengatur container pada bigian class foto*/
 .foto {
@@ -136,7 +132,8 @@ h1 {
 }
 
 .foto img,
-.kumpulan_gambar img {
+.kumpulan_gambar img,
+.foto video {
   box-shadow: 0px 5px 5px rgb(0, 0, 0);
   margin-bottom: 10px; /*mengatur margin bagina bawah agar tidak terlalu jauh jarak antara foto dengan text*/
 }
@@ -156,7 +153,10 @@ p {
   max-width: 700px;
 }
 
-table, tr, td, th {
+table,
+tr,
+td,
+th {
   text-align: left;
   border: 2px black solid;
   border-collapse: collapse;
@@ -168,12 +168,11 @@ th {
   color: white;
 }
 
-.harga{
+.harga {
   margin-top: 5%;
   display: flex;
   justify-content: center;
 }
-
 
 /*================ bagian statistik pekerjaan pelayanan =====================*/
 .stats {
@@ -197,7 +196,6 @@ th {
   margin: 20px;
 }
 
-
 /* ========================================================================= */
 
 /* garis kecil */
@@ -214,7 +212,7 @@ th {
 
 .kanan {
   grid-area: kanan; /* mengdeklarisikan bahwa ini bagian kanan pada class contentindex*/
-  display: flex; 
+  display: flex;
   flex-wrap: wrap; /* Agar konten otomatis kebawah saat sudah memenuhi container */
   margin: 5px;
   gap: 10px; /* Jarak setiap konten */
@@ -223,7 +221,7 @@ th {
 
   background-color: #1f3a36;
   border-radius: 10px;
-  align-content: flex-start; 
+  align-content: flex-start;
 }
 
 .kiri {
@@ -509,6 +507,15 @@ select {
 /* Align isi ke atas */
 .align-top {
   align-items: flex-start;
+}
+
+.gender {
+  display: flex;
+  gap: 30px;
+  padding: 12px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 1px black;
 }
 
 /* =========================

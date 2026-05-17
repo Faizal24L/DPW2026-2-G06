@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,15 +7,14 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+      <!-- container untuk menampung seluaruh isi section -->
     <div class="container">
-      <!-- wadah utama untuk menampung seluruh isi website -->
+      <!-- wadah untuk seluruh isi pada section header -->
       <div class="header">
-        <!-- wadah untuk seluruh isi pada section header -->
         <h1>Layanan Street Photography & Vidiography</h1>
       </div>
-
-      <div class="menu">
         <!-- wadah untuk seluruh isi pada section navigasi/menu -->
+      <div class="menu">
         <div class="navigasi">
           <a href="index.html">Home</a>
         </div>
@@ -29,11 +28,10 @@
           <a href="about_us.html">About Us</a>
         </div>
       </div>
-
+      <!-- wadah untuk seluruh isi pada section content -->
       <div class="contentIndex">
-        <!-- wadah untuk seluruh isi pada section content -->
+         <!-- di bagian section konten saya membagi dua bagian yaitu bagian kanan dan bagian kiri, class kiri untuk menampung content bagian kiri-->
         <div class="kiri">
-          <!-- di bagian section konten saya membagi dua bagian yaitu bagian kanan dan bagian kiri, class kiri untuk menampung content bagian kiri-->
           <p class="s_judul">
             <b>Lyanan Kami</b>
           </p>
@@ -47,27 +45,27 @@
             berkesan. Kami juga mengutamakan kreativitas serta detail agar
             setiap karya memiliki nilai visual yang profesional dan elegan.
           </p>
+          <!--untuk menampung semua foto pada content bagian kiri-->
           <div class="kumpulan_foto">
-            <!--untuk menampung semua foto pada content bagian kiri-->
+            <!--untuk menampung satu foto beserta infonya-->
             <div class="foto">
-              <!--untuk menampung satu foto beserta infonya-->
               <img
                 class="gambarkiri"
                 src="./gambar/gambar1.jpg"
                 alt="gambar2"
               />
-              <i class="fa-solid fa-camera"></i>
-              <!--logo foto yang saya ambil pada website font awesome-->
               <h3>Photography</h3>
               <p>foto berkualitas tinggi untuk setiap momen berharga anda</p>
             </div>
             <div class="foto">
-              <img
+              <video
                 class="gambarkiri"
-                src="./gambar/gambar6.jpg"
-                alt="gambar2"
-              />
-              <i class="fa-solid fa-video"></i>
+                src="./gambar/vidio.mp4"
+                autoplay
+                loop
+                muted
+                playsinline
+              ></video>
               <h3>Vidiography</h3>
               <p>foto berkualitas tinggi untuk setiap momen berharga anda</p>
             </div>
@@ -77,15 +75,16 @@
                 src="./gambar/gambar6.jpg"
                 alt="gambar2"
               />
-              <i class="fa-solid fa-pen-to-square"></i>
               <h3>Editing</h3>
               <p>foto berkualitas tinggi untuk setiap momen berharga anda</p>
             </div>
           </div>
+          <!-- tulisan kecil di atas sub-judul -->
           <p class="s_judul">
             <b>Tentang Kami</b>
           </p>
           <h2>Mengabadikan Momen Menciptakan kenangan</h2>
+          <!-- garis kecil berwarna cyan sebagai pembatas dan hiasan -->
           <div class="garis"></div>
           <p>
             Kami adalah tim kreatif yang passionate dalam dunia visual. Dengan
@@ -95,6 +94,7 @@
             setiap hasil foto maupun video agar memberikan kesan yang lebih
             berharga dan profesional.
           </p>
+          <!-- table harga (informasi mengenai harga jasa) -->
           <div class="harga">
             <table>
               <tr>
@@ -144,6 +144,7 @@
               </tr>
             </table>
           </div>
+          <!-- untuk statistik (Project apa saja yang telah di selesaikan) serta tingkat kepuasan costumer -->
           <div class="stats">
             <div class="sub-stats">
               <h3>150+</h3>
@@ -188,11 +189,12 @@
                 >selengkapnya</a
               >
             </p>
-
+            <!-- tulisan kecil di atas sub-judul -->
             <p class="s_judul"><b>Kenapa Harus Layanan Kami?</b></p>
             <h2>
               Hadirkan Citra Berkelas Lewat Kualitas Visual Tanpa Kompromi
             </h2>
+            <!-- garis kecil sebagai pembatas atau hiasan saja agar tampak lebih bagu -->
             <div class="garis"></div>
             <p>
               Di era digital, visual yang berkualitas adalah kunci utama untuk
@@ -209,7 +211,9 @@
           </div>
         </div>
       </div>
+      <!-- wadah untuk seluruh isi pada section sidebar -->
       <div class="sidebar">
+        <!-- class box untuk membedakan topik yang berbeda pada sidebar -->
         <div class="box">
           <h2>Info Kontak</h2>
           <p>WhatsApp : 0812-3456-7890</p>
@@ -222,8 +226,8 @@
           <p>Sabtu - Minggu : 09.00 - 22.00</p>
         </div>
       </div>
-      <div class="footer">"SETIAP MOMEN BERHARGA LAYAK UNTUK DI ABADIKAN"</div>
       <!-- wadah untuk seluruh isi pada section footer -->
+      <div class="footer"><b>" COPYRIGHT BY : DPW2025-2-G06 "</b></div>
     </div>
     <script src="script.js"></script>
   </body>
