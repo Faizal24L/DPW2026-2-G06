@@ -3,18 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Layanan</title>
+    <meta
+      name="description"
+      content="Halaman layanan pemesanan Photography & Videography profesional untuk prewedding, wedding, wisuda, video cinematic, live streaming, hingga editing video. Isi formulir konsultasi untuk mendapatkan layanan visual terbaik sesuai kebutuhan Anda."
+    />
+    <title>Layanan Photography & Videography</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
+    <!-- container untuk menampung seluaruh isi section -->
     <div class="container">
+      <!-- wadah untuk seluruh isi pada section header -->
       <div class="header">
-        <h1 class="judul_layanan">Layanan Street Photography & Vidiography</h1>
+        <h1 class="judul_layanan">Layanan Street Photography & Videography</h1>
       </div>
-
+      <!-- wadah untuk seluruh isi pada section navigasi/menu -->
       <div class="menu">
-        <!-- wadah untuk seluruh isi pada section navigasi/menu -->
         <div class="navigasi">
           <a href="index.html">Home</a>
         </div>
@@ -28,98 +33,102 @@
           <a href="about_us.html">About Us</a>
         </div>
       </div>
+      <!-- wadah untuk seluruh isi pada section content -->
+      <div class="content">
+        <div class="content-layanan">
+          <!-- wadah untuk judul dari Form Pemesanan -->
+          <div class="form-header">
+            <h2>Form Pemesanan / Konsultasi</h2>
+            <p>
+              Isi formulir di bawah ini dan tim kami akan segera menghubungi
+              Anda.
+            </p>
+          </div>
+          <!-- wadah dari inputan yang akan di input oleh user -->
+          <form class="custom-form">
+            <!-- inputan di baris pertama yaitu nama & email -->
+            <div class="form-row">
+              <div class="input-group">
+                <label>Nama Lengkap</label>
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Masukkan nama lengkap Anda" />
+                </div>
+              </div>
 
-      <div class="content-layanan">
-        <div class="form-header">
-          <h2>Form Pemesanan / Konsultasi</h2>
-          <p>
-            Isi formulir di bawah ini dan tim kami akan segera menghubungi Anda.
-          </p>
+              <div class="input-group">
+                <label>Email</label>
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Masukkan email Anda" />
+                </div>
+              </div>
+            </div>
+            <!-- inputan di baris pertama yaitu nomor & alamat -->
+            <div class="form-row">
+              <div class="input-group">
+                <label>Nomor WhatsApp</label>
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Masukan Nomor Hp Anda" />
+                </div>
+              </div>
+
+              <div class="input-group">
+                <label>Alamat</label>
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Masukkan alamat Anda" />
+                </div>
+              </div>
+            </div>
+            <!-- wadah untuk inputan drop down (layanan yang akan di pilih) -->
+            <div class="input-group full-width">
+              <label>Layanan yang Dipilih</label>
+              <div class="input-wrapper">
+                <select name="layanan">
+                  <option value="">Pilih layanan yang Anda butuhkan</option>
+
+                  <option value="foto-prewedding">Foto Prewedding</option>
+                  <option value="foto-wedding">Foto Wedding</option>
+                  <option value="foto-wisuda">Foto Wisuda</option>
+                  <option value="foto-produk">Foto Produk</option>
+                  <option value="video-cinematic">Video Cinematic</option>
+                  <option value="live-streaming">Live Streaming</option>
+                  <option value="desain-grafis">Desain Grafis</option>
+                  <option value="editing-video">Editing Video</option>
+                </select>
+              </div>
+            </div>
+            <!-- wadah untuk inputan text area (menjelasan keterangan & detail) -->
+            <div class="input-group full-width">
+              <label>Keterangan / Detail Kebutuhan</label>
+              <div class="input-wrapper align-top">
+                <textarea
+                  rows="4"
+                  placeholder="Ceritakan kebutuhan Anda secara detail di sini..."
+                ></textarea>
+              </div>
+            </div>
+            <!-- wadah inputan text (tanggal pemesanan) -->
+            <div class="input-group full-width">
+              <label>Tanggal Pemesanan</label>
+              <div class="input-wrapper">
+                <input type="text" name="tanggal_pemesanan" />
+              </div>
+            </div>
+            <!-- wadah untuk radio button (menentukan jenis kelamin) -->
+            <div class="gender">
+              <div>
+                <label for="male">Laki-laki</label>
+                <input name="gender" value="male" id="male" type="radio" />
+              </div>
+              <div>
+                <label for="female">Perempuan</label>
+                <input name="gender" value="female" id="female" type="radio" />
+              </div>
+            </div>
+            <button type="submit" class="btn-submit">Kirim Pesan</button>
+          </form>
         </div>
-
-        <form class="custom-form"></form>
-
-        <form class="custom-form">
-          <div class="form-row">
-            <div class="input-group">
-              <label>Nama Lengkap</label>
-              <div class="input-wrapper">
-                <input type="text" placeholder="Masukkan nama lengkap Anda" />
-              </div>
-            </div>
-
-            <div class="input-group">
-              <label>Email</label>
-              <div class="input-wrapper">
-                <input type="text" placeholder="Masukkan email Anda" />
-              </div>
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="input-group">
-              <label>Nomor WhatsApp</label>
-              <div class="input-wrapper">
-                <input type="text" placeholder="Masukan Nomor Hp Anda" />
-              </div>
-            </div>
-
-            <div class="input-group">
-              <label>Alamat</label>
-              <div class="input-wrapper">
-                <input type="text" placeholder="Masukkan alamat Anda" />
-              </div>
-            </div>
-          </div>
-
-          <div class="input-group full-width">
-            <label>Layanan yang Dipilih</label>
-            <div class="input-wrapper">
-              <select name="layanan">
-                <option value="">Pilih layanan yang Anda butuhkan</option>
-
-                <option value="foto-prewedding">Foto Prewedding</option>
-                <option value="foto-wedding">Foto Wedding</option>
-                <option value="foto-wisuda">Foto Wisuda</option>
-                <option value="foto-produk">Foto Produk</option>
-                <option value="video-cinematic">Video Cinematic</option>
-                <option value="live-streaming">Live Streaming</option>
-                <option value="desain-grafis">Desain Grafis</option>
-                <option value="editing-video">Editing Video</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="input-group full-width">
-            <label>Keterangan / Detail Kebutuhan</label>
-            <div class="input-wrapper align-top">
-              <textarea
-                rows="4"
-                placeholder="Ceritakan kebutuhan Anda secara detail di sini..."
-              ></textarea>
-            </div>
-          </div>
-
-          <div class="input-group full-width">
-            <label>Tanggal Pemesanan</label>
-            <div class="input-wrapper">
-              <input type="text" name="tanggal_pemesanan" />
-            </div>
-          </div>
-          <div class="gender">
-            <div>
-              <label for="male">Laki-laki</label>
-              <input name="gender" value="male" id="male" type="radio" />
-            </div>
-            <div>
-              <label for="female">Perempuan</label>
-              <input name="gender" value="female" id="female" type="radio" />
-            </div>
-          </div>
-          <button type="submit" class="btn-submit">Kirim Pesan</button>
-        </form>
       </div>
-
+      <!-- wadah untuk seluruh isi pada section sidebar -->
       <div class="sidebar">
         <div class="box">
           <h2>Info Kontak</h2>
@@ -133,7 +142,7 @@
           <p>Sabtu - Minggu : 09.00 - 22.00</p>
         </div>
       </div>
-
+      <!-- wadah untuk seluruh isi pada section footer -->
       <div class="footer"><b>" COPYRIGHT BY : DPW2025-2-G06 "</b></div>
     </div>
 

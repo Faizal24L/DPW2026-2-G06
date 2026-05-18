@@ -257,58 +257,123 @@ th {
 }
 /* ---------------------------------------------------------------------------------- */
 /* Halaman About Us */
+
+.content {
+  grid-area: content;
+}
 .contentAbout {
   grid-area: content;
 
   display: grid;
-  grid-template-areas: "atas tengah bawah";
+  grid-template-areas: 
+    "baris1 baris1 baris1"
+    "kiri tengah kanan"
+    "table table sumber";
+
+  grid-template-rows: 20% 30% 60%;
   grid-template-columns: 1fr 1fr 1fr;
   box-shadow: 0px 0px 8px black;
   background-color: #f4f1e6;
+  justify-content: center;
 }
 
-.person {
+.pengerjaan {
+  grid-area: table;
+  margin-left: 40px;
+  margin-top: 40px;
+}
+
+.sumber {
+  grid-area: sumber;
+  margin-left: 40px;
+  margin-top: 40px;
+  font-size: 25px;
+}
+
+.identitas {
+  grid-area: baris1;
+  padding-left: 55px;
+  display: flex;
+  flex-direction: column;
+}
+
+.identitas p{
+  margin: 0px;
+  margin-bottom: 10px;
+}
+.identitas h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.person1 {
+  grid-area: kiri;
+
   display: flex;
   align-items: center;
-  /* flex-wrap: wrap; */
+  justify-content: center;
   flex-direction: column;
+  align-self: center;
+  justify-self: center;
 
-  width: 400px;
-  height: 600px;
+  width: 40%;
+  height: 80%;
   padding: 20px;
   background-color: rgb(255, 255, 255);
   border-radius: 40px;
   box-shadow: 0px 5px 5px black;
 
-  margin: 50px;
+  margin: 30px;
+}
+.person2 {
+  grid-area: tengah;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+
+  width: 40%;
+  height: 80%;
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 40px;
+  box-shadow: 0px 5px 5px black;
+
+  margin: 30px;
+}
+.person3 {
+  grid-area: kanan;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+
+  width: 40%;
+  height: 80%;
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 40px;
+  box-shadow: 0px 5px 5px black;
+
+  margin: 30px;
 }
 
-.person p {
+.person1 p, .person2 p, .person3 p {
   text-align: center;
   margin: 0px;
   margin-top: 10px;
   color: black;
 }
 
-.person img {
-  width: 200px;
-  height: 200px;
+.person1 img, .person2 img, .person3 img {
+  width: 60%;
+  height: 65%;
   border-radius: 50%;
   box-shadow: 0px 5px 5px black;
   margin: 0px;
-}
-
-.job-desk {
-  height: 320px;
-  width: 300px;
-  background-color: #1f3a36;
-  border-radius: 20px;
-  margin-top: 10px;
-}
-
-.job-desk ul,
-.job-desk p {
-  color: white;
 }
 
 /*---------------------------------------------------------*/
