@@ -45,21 +45,27 @@
             </p>
           </div>
           <!-- wadah dari inputan yang akan di input oleh user -->
-          <form class="custom-form">
+          <form class="custom-form" onsubmit="return semua();">
             <!-- inputan di baris pertama yaitu nama & email -->
             <div class="form-row">
               <div class="input-group">
                 <label>Nama Lengkap</label>
                 <div class="input-wrapper">
-                  <input type="text" placeholder="Masukkan nama lengkap Anda" />
+                  <input
+                    type="text"
+                    id="nama"
+                    placeholder="Masukkan nama lengkap Anda"
+                  />
                 </div>
+                <i><small id="error-nama"></small></i>
               </div>
 
               <div class="input-group">
                 <label>Email</label>
                 <div class="input-wrapper">
-                  <input type="text" placeholder="Masukkan email Anda" />
+                  <input type="text" id="gmail" placeholder="Masukkan email Anda" />
                 </div>
+                <i><small id="error-email"></small></i>
               </div>
             </div>
             <!-- inputan di baris pertama yaitu nomor & alamat -->
@@ -67,8 +73,13 @@
               <div class="input-group">
                 <label>Nomor WhatsApp</label>
                 <div class="input-wrapper">
-                  <input type="text" placeholder="Masukan Nomor Hp Anda" />
+                  <input
+                    type="text"
+                    id="nomorWa"
+                    placeholder="Masukan Nomor Hp Anda"
+                  />
                 </div>
+                <i><small id="nomor-error"></small></i>
               </div>
 
               <div class="input-group">
@@ -110,8 +121,9 @@
             <div class="input-group full-width">
               <label>Tanggal Pemesanan</label>
               <div class="input-wrapper">
-                <input type="text" name="tanggal_pemesanan" />
+                <input type="date" id="kalender" name="tanggal_pemesanan" />
               </div>
+              <i><small id="date-error"></small></i>
             </div>
             <!-- wadah untuk radio button (menentukan jenis kelamin) -->
             <div class="gender">
@@ -132,14 +144,14 @@
       <div class="sidebar">
         <div class="box">
           <h2>Info Kontak</h2>
-          <p>WhatsApp : 0812-3456-7890</p>
-          <p>Instagram : @authenticlife.id</p>
-          <p>Email : authentic@gmail.com</p>
+          <p>WhatsApp : <br> 0812-3456-7890</p>
+          <p>Instagram : <br> @authenticlife.id</p>
+          <p>Email : <br> authentic@gmail.com</p>
         </div>
         <div class="box">
-          <h3>Jam Operasional</h3>
-          <p>Senin - Jumat : 08.00 - 20.00</p>
-          <p>Sabtu - Minggu : 09.00 - 22.00</p>
+          <h2>Jam Operasional</h2>
+          <p>Senin - Jumat : <br> 08.00 - 20.00</p>
+          <p>Sabtu - Minggu : <br> 09.00 - 22.00</p>
         </div>
       </div>
       <!-- wadah untuk seluruh isi pada section footer -->

@@ -15,7 +15,7 @@ body {
     "content content sidebar"
     "footer footer footer";
   /* Mengatur besar setiap kolom dan baris pada bagian bagian grid */
-  grid-template-columns: 200px 1fr 250px;
+  grid-template-columns: 200px 1fr 300px;
   grid-template-rows: 400px 50px 1fr 50px;
   gap: 5px; /* memberikan jarak setiap container elemen yang di bungkus oleh class container*/
 }
@@ -41,7 +41,6 @@ body {
   display: flex;
   flex-direction: column; /* mengatur agar flex di susun secara vertikal*/
   flex-wrap: wrap; /* mengubah yang awal nya dari kolom menjadi vertikal*/
-  justify-content: center; /*dilakukan agar secara rata tengah secara vertikal*/
   /* gap: 100px; */
 }
 
@@ -49,15 +48,16 @@ body {
   font-size: xx-large;
   color: white;
   text-decoration: none; /* Untuk menghilangkan garis bawah pada menu navigasi */
+  font-weight: bold;
 }
 .navigasi {
   text-align: center; /* untuk mengatus agar text rata tengah secara horizontal*/
 }
 
 .sidebar {
-  display: grid;
-  grid-template-areas: "boxAtas" "boxBawah";
-  grid-template-rows: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
 
   grid-area: sidebar; /* untuk mengdeklarasi bahwa ini bagian sidebar pada class container */
   background-color: #f4f1e6;
@@ -89,22 +89,27 @@ h1 {
 /*  */
 .box {
   background-color: white;
-  margin: 10px;
+  margin: 5px;
   border-style: solid;
   border-color: #1f3a36;
   border-width: 4px;
   border-radius: 7px;
+  width: 90%;
+  height: auto;
 }
 /*  */
 .box h2 {
   background-color: #1f3a36;
   margin: 0;
   text-align: center;
+  color: white;
 }
 /*  */
 .box p {
   margin: 10px;
   padding: 5px;
+  font-weight: bold;
+  font-size: larger;
 }
 
 /* ====== index ====== */
@@ -287,7 +292,13 @@ th {
   margin-left: 40px;
   margin-top: 40px;
   font-size: 25px;
+  background-color: #1f3a36;
+  color: white;
+  width: 70%;
+  height: 55%;
+  border-radius: 5px;
 }
+
 /* about_us: Mengdeklarasikan class identitas berada di grid area baris1 pada class contentAbout dan mengatur isi contaner pada class identitas */
 .identitas {
   grid-area: baris1;
@@ -492,7 +503,7 @@ select {
 /* evaluasi: mengatur isi table pada tag (td) */
 .evalution-table td {
   padding: 12px 12px;
-  font-size: 14px;
+  font-size: 19px;
   color: #334155;
 }
 
