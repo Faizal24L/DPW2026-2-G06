@@ -1,92 +1,88 @@
+/* global: Mengatur jenis font dasar untuk seluruh teks di website */
 body {
-  background-color: #ededed;
-  margin: 0;
   font-family: "Bebas Neue", sans-serif;
 }
-/* ------------------------------------------------------------- */
 
+/* global: Mengatur layout grid utama (4 baris x 3 kolom) untuk penempatan elemen website */
 .container {
   display: grid;
   height: 100%;
-  /* Membuat Grid menjadi 4 baris tiga kolom */
   grid-template-areas:
     "header header header"
     "menu menu menu"
     "content content sidebar"
     "footer footer footer";
-  /* Mengatur besar setiap kolom dan baris pada bagian bagian grid */
   grid-template-columns: 200px 1fr 300px;
   grid-template-rows: 400px 50px 1fr 50px;
-  gap: 5px; /* memberikan jarak setiap container elemen yang di bungkus oleh class container*/
+  gap: 5px;
 }
-
+/* Mengatur latar belakang, bayangan, dan posisi konten di area header */
 .header {
-  grid-area: header; /* untuk mengdeklarasi bahwa ini bagian header pada class container */
+  grid-area: header;
   background-image: url("./gambar/background2.png");
   background-position: center;
-  box-shadow: 0px 0px 10px rgb(0, 0, 0); /* membarikan efk bayangan */
-
-  text-align: center; /* mengatur agar rata tengah secara horizontal */
+  box-shadow: 0px 0px 10px rgb(0, 0, 0);
+  text-align: center;
   display: flex;
-  justify-content: center; /* Mengatur agar rata tengah secara vertikal */
+  justify-content: center;
   flex-direction: column;
   border-radius: 5px;
 }
-
+/* Mengatur area menu navigasi agar tersusun secara vertikal */
 .menu {
-  grid-area: menu; /* untuk mengdeklarasi bahwa ini bagian menu pada class container */
+  grid-area: menu;
   background-color: #1f3a36;
   box-shadow: 0px 0px 8px rgb(0, 0, 0);
-
   display: flex;
-  flex-direction: column; /* mengatur agar flex di susun secara vertikal*/
-  flex-wrap: wrap; /* mengubah yang awal nya dari kolom menjadi vertikal*/
-  /* gap: 100px; */
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
+/* Mengatur tampilan teks link pada menu navigasi */
 .navigasi a {
   font-size: xx-large;
   color: white;
-  text-decoration: none; /* Untuk menghilangkan garis bawah pada menu navigasi */
+  text-decoration: none;
   font-weight: bold;
 }
+/* Memastikan teks navigasi berada di rata tengah */
 .navigasi {
-  text-align: center; /* untuk mengatus agar text rata tengah secara horizontal*/
+  text-align: center;
 }
-
+/* Mengatur layout dan warna latar pada area sidebar */
 .sidebar {
   display: flex;
   flex-direction: column;
   justify-items: center;
-
-  grid-area: sidebar; /* untuk mengdeklarasi bahwa ini bagian sidebar pada class container */
+  grid-area: sidebar;
   background-color: #f4f1e6;
-  box-shadow: 0px 0px 8px rgb(0, 0, 0); /*menciptakan banyangan*/
+  box-shadow: 0px 0px 8px rgb(0, 0, 0);
 }
-
+/* Mengatur area footer agar teks berada di tengah dengan latar gelap */
 .footer {
-  grid-area: footer; /* untuk mengdeklarasi bahwa ini bagian footer pada class container */
+  grid-area: footer;
   background-color: #1f3a36;
   box-shadow: 0px 0px 8px rgb(0, 0, 0);
   color: white;
-
   display: flex;
-  text-align: center; /*untuk mengatur agar text berada di tengah secara horizontal*/
+  text-align: center;
   justify-content: center;
-  flex-direction: column; /* untuk mengatur konten agar tersusun seacara vertikal*/
+  flex-direction: column;
 }
 
-/* Mengatur judul pada Header di semua halaman */
+/* Mengatur ukuran dan efek bayangan pada judul utama (H1) */
 h1 {
   font-size: 50px;
   color: white;
   text-shadow: 0px 8px 20px #f4f1e6;
 }
-/* Mengdeklarasikan class content berada di area content pada class container */
+
+/* Menentukan area penempatan konten utama di dalam grid */
 .content {
   grid-area: content;
 }
-/*  */
+
+/* Mengatur gaya kotak kustom (bingkai, warna dasar, dan ukuran) */
 .box {
   background-color: white;
   margin: 5px;
@@ -97,37 +93,50 @@ h1 {
   width: 90%;
   height: auto;
 }
-/*  */
+
+/* Mengatur tampilan judul di dalam kotak kustom */
 .box h2 {
   background-color: #1f3a36;
   margin: 0;
   text-align: center;
   color: white;
 }
-/*  */
+
+/* Mengatur jarak dan ukuran teks paragraf di dalam kotak kustom */
 .box p {
   margin: 10px;
   padding: 5px;
   font-weight: bold;
   font-size: larger;
 }
-
-/* ====== index ====== */
-
-/* Index: Mengatur Layout pada halaman content Index */
+/* index: Mengatur grid khusus untuk konten di halaman utama (2 kolom: kiri dan kanan) */
 .contentIndex {
   grid-area: content;
-
   display: grid;
   grid-template-areas: "kiri kanan";
   grid-template-columns: 1.5fr 1fr;
   box-shadow: 0px 0px 8px rgb(0, 0, 0);
-
   background-color: #f4f1e6;
   padding: 10px;
 }
-
-/*index: mengatur semua gambar*/
+/* index: Mengatur area konten sebelah kanan (warna latar, susunan item) */
+.kanan {
+  grid-area: kanan;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px;
+  gap: 10px;
+  padding: 35px;
+  color: white;
+  background-color: #1f3a36;
+  border-radius: 10px;
+  align-content: flex-start;
+}
+/* index: Memberikan jarak luar pada area konten sebelah kiri */
+.kiri {
+  margin: 5px;
+}
+/* index: Mengatur ukuran standar dan sudut melengkung untuk gambar portofolio */
 .gambar1,
 .gambar2,
 .gambar3,
@@ -139,12 +148,11 @@ h1 {
   height: 150px;
   width: 150px;
 }
-/* Index: Mengatur gambar pada class kumpulan foto secara Horizontal  */
+/* index: Mengatur galeri kumpulan foto agar berjajar ke samping */
 .kumpulan_foto {
   display: flex;
 }
-
-/* Index: Mengatur foto pada class gambar kiri*/
+/* index: Mengatur tampilan khusus untuk gambar utama di sebelah kiri */
 .gambarkiri {
   margin: 35px;
   height: 150px;
@@ -152,7 +160,8 @@ h1 {
   border-radius: 30px;
   object-fit: cover;
 }
-/* Index: mengatur class foto agar di atur secara vertikal */
+
+/* index: Memposisikan kontainer foto agar sejajar vertikal di tengah */
 .foto {
   display: flex;
   flex-direction: column;
@@ -161,28 +170,28 @@ h1 {
   padding-left: 50px;
   padding-right: 50px;
 }
-/* Index: Mengatur agar foto dan vidio memiliki banyangan agar foto dan vidio terlihat mencolok */
+/* index: Menambahkan efek bayangan pada gambar dan video agar lebih menonjol */
 .foto img,
 .kumpulan_gambar img,
 .foto video {
   box-shadow: 0px 5px 5px rgb(0, 0, 0);
   margin-bottom: 10px;
 }
-/* Index: mengatur text dan sub judul agar rata tengah secara horizontal */
+/* index: Meratakan teks paragraf dan judul h3 di bawah foto ke tengah */
 .foto p,
 h3 {
   text-align: center;
   margin: 2px;
 }
-/* Index: Mengatur warna class s_judul  */
+/* index: Memberi warna khusus untuk sub-judul tertentu */
 .s_judul {
   color: #32827a;
 }
-/* Index: mengatur seluruh tag p memiliki panjang maksimal 700px */
+/* index: Membatasi lebar maksimal semua paragraf agar mudah dibaca */
 p {
   max-width: 700px;
 }
-/* Index: Mengatur Table */
+/* index: Mengatur gaya dasar tabel (garis tepi, jarak sel, dan perataan teks) */
 table,
 tr,
 td,
@@ -192,40 +201,40 @@ th {
   border-collapse: collapse;
   padding: 10px;
 }
-/* index: mengatur agar judul pada table memiliki warna putih */
+
+/* index: Mengatur warna latar belakang dan teks untuk kepala tabel (header) */
 th {
   background-color: #1f3a36;
   color: white;
 }
-/* Index: mengatur table agar berada rata tengah pada */
+/* index: Menempatkan tabel harga di posisi tengah */
 .harga {
   margin-top: 5%;
   display: flex;
   justify-content: center;
 }
-/* Index: mengatur statistik project yang telah di selesaikan (pencapaian) agar rata tengah (center) pada grid area kiri */
+/* index: Mengatur area statistik agar item berjajar ke samping dengan jarak */
 .stats {
   display: flex;
   justify-content: center;
   gap: 30px;
 }
-/* Index: Mengatur tag p di class tersebut memiliki margin 0px */
+/* index: Menghilangkan margin pada teks di dalam blok statistik */
 .sub-stats p {
   margin: 0px;
 }
-/* Index: Mengatur tag h3 di class tersebut memiliki margin 10px agar ada jarak dengan table */
+/* index: Memberikan jarak atas untuk judul di dalam blok statistik */
 .sub-stats h3 {
   margin-top: 10px;
 }
-/* Index: Mengatur class .sub-stats di atur secara vertikal */
+/* index: Menyusun isi blok statistik secara vertikal di tengah */
 .sub-stats {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 20px;
 }
-
-/* Index: menciptakan garis kecil */
+/* index: Membuat elemen dekorasi berupa garis horizontal bercahaya */
 .garis {
   width: 60px;
   height: 1px;
@@ -235,25 +244,7 @@ th {
   border-radius: 50px;
   box-shadow: 0px 0px 5px #32827a;
 }
-/* Index: Mengatur grid area (kanan) */
-.kanan {
-  grid-area: kanan;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 5px;
-  gap: 10px;
-  padding: 35px;
-  color: white;
-
-  background-color: #1f3a36;
-  border-radius: 10px;
-  align-content: flex-start;
-}
-/* index: Mengatur margin pada class kiri */
-.kiri {
-  margin: 5px;
-}
-
+/* index: Menyeragamkan sudut melengkung pada berbagai elemen layout utama */
 .header,
 .contentIndex,
 .footer,
@@ -262,31 +253,31 @@ th {
 .contentAbout {
   border-radius: 5px;
 }
-/* ---------------------------------------------------------------------------------- */
-/* Halaman About Us */
-/* About_us: Mengdeklarasikan class contentAbout berada di grid area content pada class container serta mengatur grid pada class tersebut */
+/* about_us: Mengatur grid khusus untuk layout halaman About Us */
 .contentAbout {
   grid-area: content;
-
   display: grid;
   grid-template-areas:
     "baris1 baris1 baris1"
     "kiri tengah kanan"
     "table table sumber";
-
   grid-template-rows: 20% 30% 60%;
   grid-template-columns: 1fr 1fr 1fr;
   box-shadow: 0px 0px 8px black;
   background-color: #f4f1e6;
   justify-content: center;
 }
-/* about_us: Mengdeklarasikan class .pengerjaan berada di grid area class table pada class contentAbout */
+/* about_us: Menentukan posisi tabel pengerjaan di grid About Us */
 .pengerjaan {
   grid-area: table;
   margin-left: 40px;
   margin-top: 40px;
 }
-/* about_us: Mengdeklarasikan class sumber berada di grid area sumber pada class contentAbout sekaligus mengatur isi pada container class tersebut*/
+/* about_us: Meratakan teks header tabel pengerjaan ke tengah */
+.pengerjaan th {
+  text-align: center;
+}
+/* about_us: Mengatur tampilan kotak sumber informasi */
 .sumber {
   grid-area: sumber;
   margin-left: 40px;
@@ -298,37 +289,41 @@ th {
   height: 55%;
   border-radius: 5px;
 }
-
-/* about_us: Mengdeklarasikan class identitas berada di grid area baris1 pada class contentAbout dan mengatur isi contaner pada class identitas */
+/* about_us: Mengatur kotak identitas agar lebarnya menyesuaikan panjang teks */
 .identitas {
   grid-area: baris1;
-  padding-left: 55px;
+  padding: 10px;
   display: flex;
+  color: white;
   flex-direction: column;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: #1f3a36;
+  height: 70%;
+  width: fit-content;
 }
-
+/* about_us: Mengatur jarak antar paragraf di dalam kotak identitas */
 .identitas p {
   margin: 0px;
   margin-bottom: 10px;
 }
-
+/* about_us: Memposisikan judul identitas di tengah */
 .identitas h2 {
-  margin-top: 20px;
+  margin: 0px;
   margin-bottom: 20px;
+  text-align: center;
 }
-/* about_us: Mengdeklarikan class person1 berada pada grid area kiri pada class indexAbout */
+/* about_us: Menentukan posisi grid untuk masing-masing profil tim */
 .person1 {
   grid-area: kiri;
 }
-/* about_us: Mengdeklarikan class person2 berada pada grid area tengah pada class indexAbout */
 .person2 {
   grid-area: tengah;
 }
-/* about_us: Mengdeklarikan class person3 berada pada grid area kanan pada class indexAbout */
 .person3 {
   grid-area: kanan;
 }
-/* about_us: mengatur class person1/2/3 */
+/* about_us: Mengatur bentuk, bayangan, dan layout kartu profil tim */
 .person1,
 .person2,
 .person3 {
@@ -338,7 +333,6 @@ th {
   flex-direction: column;
   align-self: center;
   justify-self: center;
-
   width: 40%;
   height: 76%;
   padding: 20px;
@@ -347,7 +341,7 @@ th {
   box-shadow: 0px 5px 5px black;
   margin: 30px;
 }
-/* about_us: Mengatur tag p pada class person1/2/3 */
+/* about_us: Meratakan teks di bawah foto profil tim ke tengah */
 .person1 p,
 .person2 p,
 .person3 p {
@@ -356,7 +350,7 @@ th {
   margin-top: 10px;
   color: black;
 }
-/* about_us: mengatur img pada class person1/2/3 */
+/* about_us: Membuat foto profil tim menjadi lingkaran penuh */
 .person1 img,
 .person2 img,
 .person3 img {
@@ -366,18 +360,16 @@ th {
   box-shadow: 0px 5px 5px black;
   margin: 0px;
 }
-
-/* layanan: Mengdeklarasikan content-layanan berada pada grid area kanan pada class contaiiner & mengatur isinya */
+/* layanan: Mengatur desain kotak utama untuk konten layanan dan formulir */
 .content-layanan {
   grid-area: content;
-
   background-color: #f4f1e6;
   border-radius: 5px;
   box-shadow: 0px 0px 5px black;
   padding: 40px;
   color: black;
 }
-/* layanan: mengatur tag select lyananan yang akan di pilih oleh costumer (drop down) */
+/* layanan: Mempercantik tampilan elemen dropdown (select) */
 select {
   width: 100%;
   padding: 12px;
@@ -385,32 +377,32 @@ select {
   border-radius: 8px;
   font-size: 16px;
 }
-/* layanan: Mengatur tag p pada class form header */
+/* layanan: Mengatur warna dan jarak untuk deskripsi di bagian atas formulir */
 .form-header p {
   font-size: 14px;
   color: #555;
   margin: 0 0 30px 0;
 }
-/* layanan: mengatur class custom-form agar di atur secara vertikal setiap item (tag) serta m jarak antar item */
+/* layanan: Memberikan jarak antar elemen form secara vertikal */
 .custom-form {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-/* layanan: mengatur class form row menjadi dua bagian (dua kolom) serta memiliki jarak */
+/* layanan: Membagi baris formulir menjadi dua kolom sejajar */
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
-/* layanan: mengatur tag label pada class input-group */
+/* layanan: Mengatur gaya label di atas kotak input */
 .input-group label {
   display: block;
   font-size: 13px;
   margin-bottom: 8px;
   color: #000;
 }
-/* layanan: Mnegatur box inputan dengan class input-wrapper */
+/* layanan: Membuat bungkus (wrapper) untuk kotak input agar mudah diberi gaya pinggiran */
 .input-wrapper {
   display: flex;
   align-items: center;
@@ -420,7 +412,7 @@ select {
   transition: border-color 0.3s;
   padding: 5px;
 }
-/* layanan: mengatur box inputan */
+/* layanan: Menghilangkan garis pinggir bawaan input agar menyatu dengan wrapper-nya */
 .input-wrapper input,
 .input-wrapper select,
 .input-wrapper textarea {
@@ -431,16 +423,15 @@ select {
   color: black;
   outline: none;
 }
-
-/* layanan: saat curson di arahkan ke box select maka akan berubah menjadi tangan */
+/* layanan: Mengubah kursor menjadi bentuk tangan saat menyorot dropdown */
 .input-wrapper select {
   cursor: pointer;
 }
-/* Align isi ke atas */
+/* layanan: Memastikan konten di dalam elemen sejajar ke atas */
 .align-top {
   align-items: flex-start;
 }
-/* layanan: mengatur box inputan pada type radio dengan class gender */
+/* layanan: Mengatur posisi pilihan radio button (gender) agar rapi menyamping */
 .gender {
   display: flex;
   gap: 30px;
@@ -449,7 +440,7 @@ select {
   border-radius: 5px;
   box-shadow: 0px 0px 1px black;
 }
-/* layanan: mengatur box submit */
+/* layanan:  Mendesain tombol submit (kirim) dengan warna menonjol */
 .btn-submit {
   background-color: #197762;
   color: #ffffff;
@@ -466,32 +457,31 @@ select {
   margin-top: 10px;
   transition: background-color 0.2s;
 }
-/* layanan: membuat type submit berubah warna saat di sentuh cursor */
+
+/* layanan: Memberikan efek warna lebih gelap saat tombol submit disorot kursor */
 .btn-submit:hover {
   background-color: #135c4c;
 }
-/* evaluasi */
-/* evaluasi: mengdeklarasikan class content Evaluasi berada di grid area content pada class cotainer & dan mengatur isinya*/
+/* evaluasi: Menghapus jarak dalam (padding) pada kontainer tabel evaluasi */
 .content-evaluasi {
+  height: 100%;
   grid-area: content;
   background-color: #f4f1e6;
   padding: 0px;
-  background-color: #f4f1e6;
 }
 
-/* evaluasi: mengatur table evaluasi agar border jadi gabung dan table memenuhi seluruh isi content */
+/* evaluasi: Menggabungkan garis pembatas tabel evaluasi agar mulus */
 .evalution-table {
   width: 100%;
+  height: 100%;
   border-collapse: collapse;
 }
-
-/* evaluasi: mengatur background color header tabel dan warna founntnya */
+/* evaluasi: Mengatur warna latar belakang dan teks tajuk (header) tabel evaluasi */
 .evalution-table thead tr {
   background-color: #0d7c66;
   color: #ffffff;
 }
-
-/* evaluasi: mengatur header table (th) */
+/* evaluasi: Mengatur ketebalan huruf dan jarak teks di tajuk tabel evaluasi */
 .evalution-table th {
   padding: 14px 12px;
   text-align: left;
@@ -499,32 +489,28 @@ select {
   font-size: 14px;
   line-height: 1.4;
 }
-
-/* evaluasi: mengatur isi table pada tag (td) */
+/* evaluasi Mengatur ukuran huruf dan jarak pada sel isi tabel */
 .evalution-table td {
   padding: 12px 12px;
   font-size: 19px;
   color: #334155;
 }
-
-/* evaluasi: mengatur agar baris agar warna bervariasi */
+/* evaluasi: Membuat warna latar berselang-seling pada baris tabel agar mudah dibaca */
 .evalution-table tbody tr:nth-child(even) {
   background-color: #f8fafc;
 }
-
-/* evaluasi: mengatur kolom nomor */
+/* evaluasi: Memusatkan teks dan membatasi lebar pada kolom pertama (misal: Nomor) */
 .evalution-table td:first-child {
   text-align: center;
   font-weight: 500;
   width: 50px;
 }
-/* evaluasi: mengatur class center agar berada di tengah secara horizontal dan memiliki lebar 70px */
+/* evaluasi: Kelas utilitas untuk meratakan elemen ke tengah dengan lebar tertentu */
 .center {
   text-align: center;
   width: 70px;
 }
-
-/* evaluasi: mengatur type chek box */
+/* evaluasi: Mengatur ukuran dan warna kustom untuk kotak centang (checkbox) */
 .center input[type="checkbox"] {
   width: 18px;
   height: 18px;

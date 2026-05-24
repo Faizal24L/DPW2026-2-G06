@@ -1,6 +1,6 @@
 function evaluasi_nomor() {
   const nomor = document.getElementById("nomorWa");
-  const format_nomor = /^[0-9]+$/gm;
+  const format_nomor = /^[0-9]+$/;
   let nomor_error = document.getElementById("nomor-error");
   nomor_error.style.color = "red";
   if (!format_nomor.test(nomor.value)) {
